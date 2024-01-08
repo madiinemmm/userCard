@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Usercard</title>
+</head>
+<body>
+    <div id="gradient">
+        <div class="wrapper">
+            <div class="card">
+                <div class="card__wrapper">
+                    <h3 class="card__txt">Enter the information</h3>
+                    <input type="text" placeholder="Enter your name.." class="input1" id="name-id">
+                    <div>
+                        <button class="next__btn2" id="next">Next ➡️</button>
+                    </div>
+                </div>
+                <div class="card__wrapper">
+                    <h3 class="card__txt">Enter the information</h3>
+                    <img src="./images/bez avatar photo.jpg" alt="" class="img" id="profile-pic">
+                    <label for="input-file">+ Add a picture</label>
+                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file" class="input">
+                    <div>
+                        <button class="next__btn" id="next">Next ➡️</button>
+                    </div>
+                </div>
+                <div class="card__wrapper">
+                    <h3 class="card__txt">Enter the information</h3>
+            
+                   <textarea name="" id="text-area" cols="40" rows="12"  placeholder="Enter a description..."></textarea>
+                           
+                
+                    <div>
+                        <button class="btn3" id="submit">Submit</button>
+                    </div>
+                </div>
+                <div class="card__wrapper" id="card-wrapper">
+         
+                    </div>
+                </div>
+            
+            
+            </div>
+            
+            
+            
+            </div>
+    </div>
+
+<script>
+    
+    let profilePic = document.getElementById("profile-pic");
+    let inputFile = document.getElementById("input-file");
+
+    inputFile.onchange = function(){
+        profilePic.src = URL.createObjectURL(inputFile.files[0]);
+    }
+
+</script>
+
+
+
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
